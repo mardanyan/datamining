@@ -25,13 +25,25 @@ def readpoints():
 def getclusters():
     global points
 
-    forel = FOREL()
+    size = int(sys.argv[2])
 
+    forel = FOREL()
+    clusters = forel.recluster(points, size)
+
+    return clusters
+
+
+    #print(clusters)
+
+    # result = []
+    # for cluster in clusters:
+    #     result.append([cluster[0], cluster[1], size])
+    #
+    #
+    # return result
     # size choise
-    size = 10
-    r_min = 0
-    r_max = ()
-    return [(100, 100, 20), (200, 200, 30)]
+
+    # return [(100, 100, 20), (200, 200, 30)]
 
 
 def drawpoints():
@@ -53,13 +65,16 @@ def drawpoints():
     clusters = getclusters()
 
     for cluster in clusters:
-        c = Circle(Point(int(cluster[0]), int(cluster[1])), 1)
+        c = Circle(Point(int(cluster[0]), int(cluster[1])), 3)
         c.draw(win)
         c.setOutline('red')
         c = Circle(Point(int(cluster[0]), int(cluster[1])), int(cluster[2]))
         c.draw(win)
         c.setOutline('red')
 
+    size = int(sys.argv[2])
+    text = Text(Point(width / 2, 20), "Radius:" + str(size))
+    text.draw(win)
 
 
     win.getMouse()
