@@ -7,7 +7,7 @@ pip3 install --user http://bit.ly/csc161graphics
 
 ![alt text](drawpoints6.png)
 
-#calculate cluster
+# calculate cluster
 ./drawclusters.py points1.txt
 
 
