@@ -8,8 +8,8 @@ pip3 install --user http://bit.ly/csc161graphics
 
 
 # calculate cluster
-./drawclusters.py points1.txt 50
-./drawclusters.py points5.txt 150
+./drawclusters.py points/points1.txt 50
+./drawclusters.py points/points5.txt 150
 
 ![alt text](results/cluster1.png)
 ![alt text](results/cluster2.png)
