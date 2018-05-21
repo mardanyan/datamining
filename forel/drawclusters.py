@@ -5,6 +5,7 @@
 import sys
 import os.path
 from graphics import *
+from forel import FOREL
 points = []
 filename = ""
 
@@ -23,6 +24,13 @@ def readpoints():
 
 def getclusters():
     global points
+
+    forel = FOREL()
+
+    # size choise
+    size = 10
+    r_min = 0
+    r_max = ()
     return [(100, 100, 20), (200, 200, 30)]
 
 
@@ -57,8 +65,6 @@ def drawpoints():
     win.getMouse()
 
     win.close()
-
-    
 
 
 def main():
